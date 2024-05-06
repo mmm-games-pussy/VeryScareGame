@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class Door : MonoBehaviour, IInteractable
 {
-    public bool isOpen;
 
     public string GetDescription()
     {
@@ -14,8 +13,7 @@ public class Door : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        isOpen = !isOpen;
-        int randomScene = Random.Range(1, 2);
+        int randomScene = Random.Range(1, 3);
         SceneManager.LoadScene(randomScene);
     }
 }

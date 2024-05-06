@@ -18,7 +18,7 @@ public class PlayerInteraction : MonoBehaviour
 
     void InteractionRay()
     {
-        Ray ray = mainCam.ViewportPointToRay(Vector3.one / 1.2f);
+        Ray ray = mainCam.ViewportPointToRay(Vector3.one / 1f);
         RaycastHit hit;
 
         bool hitSomething = false;

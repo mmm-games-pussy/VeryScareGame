@@ -612,7 +612,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0788faaed07ce34f99495a26413ac05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isOpen: 0
 --- !u!65 &841015051
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -643,7 +642,7 @@ MeshRenderer:
   m_GameObject: {fileID: 841015049}
   m_Enabled: 0
   m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
   m_MotionVectors: 1
@@ -693,8 +692,8 @@ Transform:
   m_GameObject: {fileID: 841015049}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.937, y: 0.959, z: 7.219}
-  m_LocalScale: {x: 1.1876, y: 2.6637, z: 1}
+  m_LocalPosition: {x: -3.953, y: 1.0527, z: 7.556}
+  m_LocalScale: {x: 1.0539657, y: 2.2534654, z: 0.1879151}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
