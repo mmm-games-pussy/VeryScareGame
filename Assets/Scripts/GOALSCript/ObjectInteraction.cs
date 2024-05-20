@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class ObjectInteraction : MonoBehaviour
 {
@@ -8,9 +9,16 @@ public class ObjectInteraction : MonoBehaviour
     public string lobbySceneName = "Lobby";
     public KeyCode pickUpKey = KeyCode.E;
     public KeyCode interactKey = KeyCode.E;
+    public TMP_Text messageText; // TextMeshPro Text элемент для сообщений
 
     private GameObject pickedObject;
     private bool isHoldingObject = false;
+
+    void Start()
+    {
+        // Изначальное сообщение
+        messageText.text = "Найди бензин";
+    }
 
     void Update()
     {
@@ -35,7 +43,7 @@ public class ObjectInteraction : MonoBehaviour
                 pickedObject = hit.collider.gameObject;
                 pickedObject.SetActive(false); // Убираем объект с экрана
                 isHoldingObject = true;
-                Debug.Log("Picked up " + pickedObject.name);
+                messageText.text = "Возвращайся в машину";
             }
         }
     }
@@ -47,8 +55,7 @@ public class ObjectInteraction : MonoBehaviour
         {
             if (hit.collider.CompareTag(targetTag))
             {
-                Debug.Log("Interacted with " + hit.collider.name);
-                SceneManager.LoadScene("LobbyScene") ;
+                SceneManager.LoadScene(lobbySceneName);
             }
         }
     }

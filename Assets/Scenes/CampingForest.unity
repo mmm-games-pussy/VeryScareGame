@@ -1568,6 +1568,7 @@ MonoBehaviour:
   lobbySceneName: LobbyScene
   pickUpKey: 101
   interactKey: 101
+  messageText: {fileID: 656256039}
 --- !u!4 &471308069 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 423866, guid: 6c2bb458d4ac1614485f1c8ba5adb8f9, type: 3}
@@ -2161,6 +2162,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 620738439}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &656256039 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4692888006284605768, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
+  m_PrefabInstance: {fileID: 374863591}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &656576815 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 458786, guid: bbe3e65d308bf7b4bba358ca68dac3f9, type: 3}
