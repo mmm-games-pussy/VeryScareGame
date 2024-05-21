@@ -189,7 +189,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d506ed00a68f88447829e4459ab8a671, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  light: {fileID: 6654747953571890369}
+  lightSource: {fileID: 6654747953571890369}
+  switchOnSound: {fileID: 0}
+  switchOffSound: {fileID: 0}
 --- !u!1 &6367989169707318596 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -7330325463882065962, guid: a263f25a0a173e3478d3e0a031151b7f, type: 3}
