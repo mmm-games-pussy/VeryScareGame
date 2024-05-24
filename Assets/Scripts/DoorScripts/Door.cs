@@ -10,6 +10,7 @@ public class Door : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        SceneManager.LoadScene(4);
+        int randomScene = Random.Range(3, 5);
+        SceneManager.LoadScene(randomScene);
     }
 }
