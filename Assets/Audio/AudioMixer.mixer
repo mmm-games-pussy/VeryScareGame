@@ -14,6 +14,39 @@ AudioMixerEffectController:
   m_SendTarget: {fileID: 0}
   m_EnableWetMix: 0
   m_Bypass: 0
+--- !u!244 &-190284601724269909
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: c67b3bbb1130c8d42af970d8e6b19f21
+  m_EffectName: Attenuation
+  m_MixLevel: d8dda1683cce7854db85f55495f59a85
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
+--- !u!243 &-93272456829143274
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Music
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: 1013ab5b94d30894eb3e145b745b7c0e
+  m_Children: []
+  m_Volume: 3f2c2a74cf672744dae29f91a323c298
+  m_Pitch: f2826e0abced20d4183eb77a2af82741
+  m_Send: 00000000000000000000000000000000
+  m_Effects:
+  - {fileID: -190284601724269909}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
 --- !u!241 &24100000
 AudioMixerController:
   m_ObjectHideFlags: 0
@@ -32,10 +65,13 @@ AudioMixerController:
   m_ExposedParameters:
   - guid: 872826b7a8b22394a9e0d1edeab6e68b
     name: FlashlightVol
+  - guid: 3f2c2a74cf672744dae29f91a323c298
+    name: MusicVol
   m_AudioMixerGroupViews:
   - guids:
     - 98a586df82c3d594a922a88695cf590b
     - 874dfa693bfc8db4ca82909a1f5f1f3a
+    - 1013ab5b94d30894eb3e145b745b7c0e
     name: View
   m_CurrentViewIndex: 0
   m_TargetSnapshot: {fileID: 24500006}
@@ -50,6 +86,7 @@ AudioMixerGroupController:
   m_GroupID: 98a586df82c3d594a922a88695cf590b
   m_Children:
   - {fileID: 718815569070441491}
+  - {fileID: -93272456829143274}
   m_Volume: 6b60dafdf382a2e468990177bd56695f
   m_Pitch: 6e4fb2901e9e55f44b6d8caf1e2756d2
   m_Send: 00000000000000000000000000000000
@@ -90,7 +127,7 @@ AudioMixerGroupController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Flashlight
+  m_Name: Effects
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: 874dfa693bfc8db4ca82909a1f5f1f3a
   m_Children: []
