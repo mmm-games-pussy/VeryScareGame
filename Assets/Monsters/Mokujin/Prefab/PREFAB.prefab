@@ -62,7 +62,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f9b3b25f4d2768c4aa44a227f7ff3201, type: 3}
       propertyPath: m_Name
-      value: Ch36_nonPBR
+      value: PREFAB
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -74,6 +74,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f9b3b25f4d2768c4aa44a227f7ff3201, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1995104580501351978}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f9b3b25f4d2768c4aa44a227f7ff3201, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6226787274341085684}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f9b3b25f4d2768c4aa44a227f7ff3201, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6757019533600062302}
     - targetCorrespondingSourceObject: {fileID: 7878436149196389204, guid: f9b3b25f4d2768c4aa44a227f7ff3201, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3739893427288068531}
@@ -127,6 +133,41 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0.87, z: 0}
+--- !u!195 &6226787274341085684
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2537725224683351478}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!114 &6757019533600062302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2537725224683351478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e597bbf63d14be64f9827d97c6b3be99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _distanceToChangeCheckpoint: 2
 --- !u!1 &4801810936366361523 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7878436149196389204, guid: f9b3b25f4d2768c4aa44a227f7ff3201, type: 3}
