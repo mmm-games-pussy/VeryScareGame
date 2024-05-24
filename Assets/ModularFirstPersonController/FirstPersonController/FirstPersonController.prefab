@@ -645,6 +645,7 @@ GameObject:
   - component: {fileID: 4459864850019384741}
   - component: {fileID: 4459864850019384740}
   - component: {fileID: 4634620223320898219}
+  - component: {fileID: 3218569194698381773}
   m_Layer: 0
   m_Name: FirstPersonController
   m_TagString: Player
@@ -841,6 +842,22 @@ MonoBehaviour:
   _playerInventory:
   - {fileID: 8151812290103926527}
   - {fileID: 4738153371869353239}
+--- !u!114 &3218569194698381773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4459864850019384750}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5187ee39dc2d9ff4791c74b2115d6b5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainCam: {fileID: 4459864851310106426}
+  interactionDistance: 1.5
+  interactionUI: {fileID: 0}
+  interactionText: {fileID: 0}
 --- !u!1 &4459864850190357393
 GameObject:
   m_ObjectHideFlags: 0
