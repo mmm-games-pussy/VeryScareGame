@@ -4,6 +4,8 @@ using UnityEngine.UI;
 
 public class PauseMenuController : MonoBehaviour
 {
+    [SerializeField] private FirstPersonController _fpController;
+
     public GameObject pauseMenuPanel;
     public GameObject settingsPanel;
     public Button continueButton;
@@ -49,6 +51,7 @@ public class PauseMenuController : MonoBehaviour
         Time.timeScale = 0f;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+        _fpController.cameraCanMove = false;
     }
 
     public void ContinueGame()
@@ -59,6 +62,7 @@ public class PauseMenuController : MonoBehaviour
         Time.timeScale = 1f;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        _fpController.cameraCanMove = true;
     }
 
     void ReturnToMainMenu()

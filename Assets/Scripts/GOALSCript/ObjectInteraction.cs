@@ -16,47 +16,45 @@ public class ObjectInteraction : MonoBehaviour
 
     void Start()
     {
-        // Изначальное сообщение
-        messageText.text = "Найди бензин";
     }
 
-    void Update()
-    {
-        if (Input.GetKeyDown(pickUpKey))
-        {
-            CheckForPickUp();
-        }
+    //void Update()
+    //{
+    //    if (Input.GetKeyDown(pickUpKey))
+    //    {
+    //        CheckForPickUp();
+    //    }
 
-        if (isHoldingObject && Input.GetKeyDown(interactKey))
-        {
-            CheckForInteraction();
-        }
-    }
+    //    if (isHoldingObject && Input.GetKeyDown(interactKey))
+    //    {
+    //        CheckForInteraction();
+    //    }
+    //}
 
-    void CheckForPickUp()
-    {
-        RaycastHit hit;
-        if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, 2f))
-        {
-            if (hit.collider.CompareTag(interactableTag))
-            {
-                pickedObject = hit.collider.gameObject;
-                pickedObject.SetActive(false); // Убираем объект с экрана
-                isHoldingObject = true;
-                messageText.text = "Возвращайся в машину";
-            }
-        }
-    }
+    //void CheckForPickUp()
+    //{
+    //    RaycastHit hit;
+    //    if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, 2f))
+    //    {
+    //        if (hit.collider.CompareTag(interactableTag))
+    //        {
+    //            pickedObject = hit.collider.gameObject;
+    //            pickedObject.SetActive(false); // Убираем объект с экрана
+    //            isHoldingObject = true;
+    //            messageText.text = "Возвращайся в машину";
+    //        }
+    //    }
+    //}
 
-    void CheckForInteraction()
-    {
-        RaycastHit hit;
-        if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, 2f))
-        {
-            if (hit.collider.CompareTag(targetTag))
-            {
-                SceneManager.LoadScene(lobbySceneName);
-            }
-        }
-    }
+    //void CheckForInteraction()
+    //{
+    //    RaycastHit hit;
+    //    if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, 2f))
+    //    {
+    //        if (hit.collider.CompareTag(targetTag))
+    //        {
+    //            SceneManager.LoadScene(lobbySceneName);
+    //        }
+    //    }
+    //}
 }

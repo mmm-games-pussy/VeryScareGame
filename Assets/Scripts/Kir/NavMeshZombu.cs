@@ -5,18 +5,26 @@ public class NavMeshZombu : MonoBehaviour
 {
     [SerializeField] private float _distanceToChangeCheckpoint = 2f;
 
+    [SerializeField] private float _initialSpeed = 3.5f;
+
     private NavMeshAgent _navMeshAgent;
+
     private GameObject[] _checkpoints;
+
     private int _currentCheckpointID;
     private int _previousCheckpointID;
 
     private Vector3 _targetPosition;
+
     private bool _hasNewTarget;
 
     private void Awake()
     {
         _navMeshAgent = GetComponent<NavMeshAgent>();
+
         _checkpoints = GameObject.FindGameObjectsWithTag("NavMeshCheckpoint");
+
+        _navMeshAgent.speed = _initialSpeed;
     }
 
     private void Start()
@@ -63,5 +71,15 @@ public class NavMeshZombu : MonoBehaviour
     {
         _targetPosition = position;
         _hasNewTarget = true;
+    }
+
+    public void SetSpeed(float speed)
+    {
+        _navMeshAgent.speed = speed;
+    }
+
+    public float GetInitialSpeed()
+    {
+        return _initialSpeed;
     }
 }
