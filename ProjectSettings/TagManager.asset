@@ -9,6 +9,7 @@ TagManager:
   - NavMeshCheckpoint
   - Camera
   - Mob
+  - Bullet
   layers:
   - Default
   - TransparentFX

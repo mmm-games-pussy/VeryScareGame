@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class PhotoCam : MonoBehaviour
@@ -6,6 +8,14 @@ public class PhotoCam : MonoBehaviour
     [SerializeField] private LayerMask _obstacleLayer;
 
     [SerializeField] private NavMeshZombu _navMeshZombu;
+
+    [SerializeField] private Light _spotLight;
+
+    [SerializeField] private AudioSource _audioSourcePhoto;
+    [SerializeField] private AudioClip _audioClipPhoto;
+
+    [SerializeField] private AudioSource _audioSourcePhotoVoice;
+    [SerializeField] private List<AudioClip> _audioSourcePhotoVoices;
 
     private Camera _camera;
     private GameObject _cameraTargetPrefab;
@@ -30,6 +40,10 @@ public class PhotoCam : MonoBehaviour
 
     private void CapturePhoto()
     {
+        StartCoroutine(FlashOnCamera());
+
+        PlaySoundPhoto(_audioClipPhoto);
+
         _camera.enabled = true;
 
         RenderTexture renderTexture = new RenderTexture(Screen.width, Screen.height, 24);
@@ -49,12 +63,25 @@ public class PhotoCam : MonoBehaviour
         if (IsTargetInPhoto(photo))
         {
             StaticInfo.CapturedImages.Add(photo);
-            StaticInfo.Money += 50;
+
+            if (StaticInfo.CapturedImages.Count == 1)
+                PlaySoundPhotoVoice(_audioSourcePhotoVoices[0]);
+            else if (StaticInfo.CapturedImages.Count == 2)
+                PlaySoundPhotoVoice(_audioSourcePhotoVoices[1]);
+            else if (StaticInfo.CapturedImages.Count == 3)
+                PlaySoundPhotoVoice(_audioSourcePhotoVoices[2]);
         }
 
         _navMeshZombu.SetTargetPosition(_camera.transform.position);
 
         _camera.enabled = false;
+    }
+
+    IEnumerator FlashOnCamera()
+    {
+        _spotLight.enabled = true;
+        yield return new WaitForSeconds(0.25f);
+        _spotLight.enabled = false;
     }
 
     private bool IsTargetInPhoto(Texture2D photo)
@@ -104,5 +131,21 @@ public class PhotoCam : MonoBehaviour
         }
 
         return false;
+    }
+
+    private void PlaySoundPhoto(AudioClip clip)
+    {
+        if (clip != null && _audioSourcePhoto != null)
+        {
+            _audioSourcePhoto.PlayOneShot(clip);
+        }
+    }
+
+    private void PlaySoundPhotoVoice(AudioClip clip)
+    {
+        if (clip != null && _audioSourcePhotoVoice != null)
+        {
+            _audioSourcePhotoVoice.PlayOneShot(clip);
+        }
     }
 }

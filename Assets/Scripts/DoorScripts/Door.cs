@@ -10,6 +10,6 @@ public class Door : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(3);
     }
 }
